@@ -48,6 +48,12 @@ namespace TesteCSharp.Controllers
             // Transforma os dados da tabela em uma lista
             var personagens = await _appDbContext.PERSONAGEM.ToListAsync();
 
+            // Verifica se a lista de personagens está vazia
+            if (personagens == null || personagens.Count == 0)
+            {
+                return NotFound("Nenhum personagem encontrado!");
+            }
+
             return Ok(personagens);
         }
 
@@ -115,6 +121,21 @@ namespace TesteCSharp.Controllers
             await _appDbContext.SaveChangesAsync();
 
             return Ok("Personagem deletado com sucesso!");
+        }
+
+        // Busca Personagens que possuem o sobrenome passado na url da requisição
+        [HttpGet("getByLastName/{sobrenome}")]
+        public async Task<ActionResult<Personagem>> GetPersonagensByLastName(string sobrenome)
+        {
+            var personagens = await _appDbContext.PERSONAGEM.Where(p => p.Nome.Contains(sobrenome)).ToListAsync();
+
+            // Verifica se a lista de personagens está vazia
+            if (personagens == null || personagens.Count == 0)
+            {
+                return NotFound("Nenhum personagem encontrado!");
+            }
+
+            return Ok(personagens);
         }
     }
 }

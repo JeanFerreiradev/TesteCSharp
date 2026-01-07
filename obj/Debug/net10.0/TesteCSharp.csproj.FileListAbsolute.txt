@@ -119,3 +119,4 @@ C:\Users\jean.wilson\Documents\Projetos c#\TesteCSharp\obj\Debug\net10.0\refint\
 C:\Users\jean.wilson\Documents\Projetos c#\TesteCSharp\obj\Debug\net10.0\TesteCSharp.pdb
 C:\Users\jean.wilson\Documents\Projetos c#\TesteCSharp\obj\Debug\net10.0\TesteCSharp.genruntimeconfig.cache
 C:\Users\jean.wilson\Documents\Projetos c#\TesteCSharp\obj\Debug\net10.0\ref\TesteCSharp.dll
+C:\Users\jean.wilson\Documents\Projetos c#\TesteCSharp\obj\Debug\net10.0\TesteCSharp.sourcelink.json
